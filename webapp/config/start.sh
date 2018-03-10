@@ -55,6 +55,9 @@ else
     python3 /srv/${DJANGO_PROJECT_NAME}/manage.py collectstatic --noinput -v 3
 fi
 
+# Django: allowedhosts
+perl -i -pe 's/localhost/$NGINX_SERVER_NAME/g' ./*
+
 
 #####
 # Start uWSGI
