@@ -56,8 +56,7 @@ else
 fi
 
 # Django: allowedhosts
-perl -i -pe 's/localhost/$NGINX_SERVER_NAME/g' ./*
-
+perl -i -pe 's/localhost/$NGINX_SERVER_NAME/g' /srv/${DJANGO_PROJECT_NAME}/starter/settings.py
 
 #####
 # Start uWSGI
